@@ -1,0 +1,20 @@
+<div class="container">
+   <h1>SVG Sprite Sheet Generator</h1>
+   <input type="file"
+      (change)="onFileSelected($event)"
+      multiple
+      accept=".svg">
+   <button (click)="generateSpriteSheet()">Generate Sprite Sheet</button>
+   <div id="output"
+      *ngIf="spriteSheetUrl">
+      <h3>Generated Sprite Sheet</h3>
+      <img [src]="spriteSheetUrl"
+         alt="Sprite Sheet">
+      <a [href]="spriteSheetUrl"
+         download="sprite-sheet.png">Download Sprite Sheet</a>
+
+      <!-- Metadata download link will be appended here -->
+   </div>
+   <!-- <button (click)="getCsvData()">configure codes</button> -->
+   <!-- <button (click)="parseAirportCodes()">configure codes</button> -->
+</div>
